@@ -6,10 +6,7 @@ const app = express();
 const PORT = 8000;
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://imageupload:imageupload@imageupload.cqizagp.mongodb.net/?retryWrites=true&w=majority&appName=Imageupload', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-});
+mongoose.connect('mongodb+srv://imageupload:imageupload@imageupload.cqizagp.mongodb.net/?retryWrites=true&w=majority&appName=Imageupload');
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 db.once('open', () => {
